@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Französisch für den Beruf I: ◊select['h1 doc]</title>
+
+		<!-- Rosario Google Web Fonts import -->
+		<link href='http://fonts.googleapis.com/css?family=Rosario:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" type="text/css" media="all" href="styles.css" />
+	</head>
+	<body>
+	<header>
+		<div class="nav">
+			<!-- previous page --> 
+			◊(define prev-page (previous here))
+			◊when/block[prev-page]{
+			<div class="nav-prev">← <a href="◊|prev-page|">◊(select 'h1 prev-page)</a></div>}
+
+			<!-- next page -->
+			◊(define next-page (next here))
+			◊when/block[next-page]{
+			<div class="nav-next"><a href="◊|next-page|">◊(select 'h1 next-page)</a> →</div>}
+		</div>
+	</header><!-- /header -->
+	<div class="content">
+		◊->html[doc]
+	</div>
+	</body>
+</html>
