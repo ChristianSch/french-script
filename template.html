@@ -7,7 +7,7 @@
 		<!-- Rosario Google Web Fonts import -->
 		<link href='http://fonts.googleapis.com/css?family=Rosario:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
-		<link rel="stylesheet" type="text/css" media="all" href="styles.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="/styles.css" />
 	</head>
 	<body>
 	<header>
@@ -23,8 +23,7 @@
 			<div class="nav-next"><a href="◊|next-page|">◊(select 'h1 next-page)</a> →</div>}
 		</div>
 	</header><!-- /header -->
-	<div class="content">
-		◊->html[doc]
-	</div>
+	<!-- content -->
+	◊(->html #:tag 'div #:attrs '((class "content")) doc)
 	</body>
 </html>

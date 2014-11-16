@@ -78,6 +78,27 @@ header .nav .nav-next {
         font-style: italic;
 }
 
+h1 .translation,
+h2 .translation,
+h3 .translation,
+h4 .translation,
+h6 .translation,
+h7 .translation,
+li .translation {
+        margin-left: 0;
+        margin-right: 0;
+}
+
+h1.sub,
+h2.sub,
+h3.sub,
+h4.sub,
+h5.sub,
+h6.sub {
+        font-size: 1.2em;
+        text-align: center;
+}
+
 .side-note {
         overflow: visible;
         height: 0;
@@ -110,4 +131,41 @@ hr {
         outline: none;
         box-shadow: none;
         border: none;
+}
+
+.excercise-number {
+        text-align: center;
+        display: block;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        width: 36px;
+    height: 36px;
+    padding: 4px;
+    font-size: 1.4em;
+    margin-left: -100px;
+    float: left;
+        transition: background ease-in-out 0.2s;
+        -webkit-transition: background ease-in-out 0.2s;
+}
+
+.excercise-number:hover {
+        background: #ccc;
+}
+
+.clearfix:after {
+        content: ".";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
+}
+
+.two-col {
+         -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+
+.two-col ul {
+        margin-top: 0;
 }
